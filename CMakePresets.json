@@ -1,0 +1,82 @@
+{
+    "version": 8,
+    "configurePresets": [
+        {
+            "name": "DebugGCC",
+            "displayName": "Debug - GCC",
+            "description": "Using compilers: C = gcc, CXX = g++",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "ReleaseGCC",
+            "displayName": "Release - GCC",
+            "description": "Using compilers: C = gcc, CXX = g++",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++",
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        }, {
+            "name": "DebugClang",
+            "displayName": "Debug - Clang",
+            "description": "Using compilers: C = clang, CXX = clang++",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "ReleaseClang",
+            "displayName": "Release - Clang",
+            "description": "Using compilers: C = clang, CXX = clang++",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "Debug - GCC",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "DebugGCC"
+        },
+        {
+            "name": "Release - GCC",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "ReleaseGCC"
+        },
+        {
+            "name": "Debug - Clang",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "DebugClang"
+        },
+        {
+            "name": "Release - Clang",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "ReleaseClang"
+        }
+    ]
+}

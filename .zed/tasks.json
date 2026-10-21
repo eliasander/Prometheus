@@ -1,0 +1,22 @@
+[
+  {
+    "label": "CMake: Build & Run 'Debug - GCC'",
+    "command": "cmake --preset DebugGCC && cp build/DebugGCC/compile_commands.json . && cmake --build --preset \"Debug - GCC\"",
+    "reveal": "always"
+  },
+  {
+    "label": "CMake: Build & Run 'Release - GCC'",
+    "command": "cmake --preset ReleaseGCC && cp build/ReleaseGCC/compile_commands.json . && cmake --build --preset \"Release - GCC\"",
+    "reveal": "always"
+  },
+  {
+    "label": "CMake: Build & Run 'Debug - Clang'",
+    "command": "cmake --preset DebugClang && cp build/DebugClang/compile_commands.json . && cmake --build --preset \"Debug - Clang\"",
+    "reveal": "always"
+  },
+  {
+    "label": "CMake: Build & Run 'Release - Clang'",
+    "command": "cmake --preset ReleaseClang && cp build/ReleaseClang/compile_commands.json . && cmake --build --preset \"Release - Clang\"",
+    "reveal": "always"
+  }
+]
